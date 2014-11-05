@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="C1w-Bv-JcA">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Pesquise-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="PesquisarVideo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="PesquisaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundoAzul.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IBA-De-IdD">
+                                <rect key="frame" x="0.0" y="76" width="1024" height="692"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rl3-mG-ahX" customClass="MGScrollView">
+                                <rect key="frame" x="0.0" y="63" width="1024" height="705"/>
+                            </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="barraAmarela.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="SAP-3o-6FT">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="81"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24r-AC-GhW">
+                                <rect key="frame" x="-8" y="12" width="64" height="48"/>
+                                <state key="normal" backgroundImage="iconeSeta.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnVoltarAoMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QE3-SD-Wfz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pesquise" id="iFs-Jf-PSV"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="scroller" destination="Rl3-mG-ahX" id="Xtr-SE-PVD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304" y="-905"/>
+        </scene>
+        <!--Web Video View Controller-->
+        <scene sceneID="hgG-93-1UK">
+            <objects>
+                <viewController storyboardIdentifier="WebVideo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="L9c-s3-UjX" customClass="WebVideoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oyJ-j5-8hk"/>
+                        <viewControllerLayoutGuide type="bottom" id="pg2-Dz-BiP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FB1-4H-uKF">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="por-NI-KA2">
+                                <rect key="frame" x="0.0" y="45" width="1024" height="723"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundoAzul.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RpD-G1-uCX">
+                                        <rect key="frame" x="0.0" y="18" width="1024" height="705"/>
+                                    </imageView>
+                                    <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqI-dM-VRl">
+                                        <rect key="frame" x="0.0" y="10" width="1024" height="729"/>
+                                        <dataDetectorType key="dataDetectorTypes"/>
+                                    </webView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r3Z-d4-aqZ">
+                                        <rect key="frame" x="0.0" y="10" width="1024" height="691"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundoAzul.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GOg-dF-SHz">
+                                        <rect key="frame" x="0.0" y="660" width="1024" height="63"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7v-XD-WZh">
+                                        <rect key="frame" x="4" y="648" width="85" height="72"/>
+                                        <state key="normal" backgroundImage="iconeAnteriorVideo.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnVoltaVideo:" destination="L9c-s3-UjX" eventType="touchUpInside" id="i23-eQ-6Ne"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9R-gv-KhZ">
+                                        <rect key="frame" x="104" y="648" width="85" height="72"/>
+                                        <state key="normal" backgroundImage="iconePause.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnPause:" destination="L9c-s3-UjX" eventType="touchUpInside" id="GgQ-zq-Z6f"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAf-cI-n8E">
+                                        <rect key="frame" x="205" y="648" width="85" height="72"/>
+                                        <state key="normal" backgroundImage="iconePlay.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnPlay:" destination="L9c-s3-UjX" eventType="touchUpInside" id="RBs-fl-sSX"/>
+                                        </connections>
+                                    </button>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HAx-Mv-Fn4">
+                                        <rect key="frame" x="911" y="35" width="113" height="109"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAL-2y-3Ww">
+                                        <rect key="frame" x="303" y="648" width="85" height="72"/>
+                                        <state key="normal" backgroundImage="iconeProximoVideo.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnPassaVideo:" destination="L9c-s3-UjX" eventType="touchUpInside" id="8EU-5H-Eez"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lws-uX-cQj">
+                                        <rect key="frame" x="626" y="667" width="400" height="52"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMg-xL-KV7">
+                                        <rect key="frame" x="391" y="664" width="114" height="52"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09q-QS-ceO">
+                                        <rect key="frame" x="513" y="664" width="114" height="52"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="barraAmarela.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="lNi-1l-Tss">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="81"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSo-y6-Pbe">
+                                <rect key="frame" x="9" y="8" width="62" height="65"/>
+                                <state key="normal" backgroundImage="iconePesquisar.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnVoltarPesquisa:" destination="L9c-s3-UjX" eventType="touchUpInside" id="qmB-AK-Tbo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4y2-u4-Lay">
+                                <rect key="frame" x="962" y="8" width="55" height="64"/>
+                                <state key="normal" backgroundImage="iconeCadiado.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnBloquearTela:" destination="L9c-s3-UjX" eventType="touchUpInside" id="sSu-7T-cxn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oF4-mf-KUO"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="imgGesture" destination="HAx-Mv-Fn4" id="DBi-XK-CHj"/>
+                        <outlet property="lblNomeVideo" destination="Lws-uX-cQj" id="qHI-Fo-YEV"/>
+                        <outlet property="lblTempoDecorrente" destination="sMg-xL-KV7" id="A0t-uC-7kV"/>
+                        <outlet property="lblTotalTempoVideo" destination="09q-QS-ceO" id="Ngf-ld-0T0"/>
+                        <outlet property="outBtnBloquearTela" destination="4y2-u4-Lay" id="Qx5-mv-XiR"/>
+                        <outlet property="outBtnPassaVideo" destination="DAL-2y-3Ww" id="57k-a5-5Yh"/>
+                        <outlet property="outBtnPause" destination="K9R-gv-KhZ" id="4Kf-ok-aVD"/>
+                        <outlet property="outBtnPlay" destination="kAf-cI-n8E" id="XBb-71-var"/>
+                        <outlet property="outBtnVoltarPesquisa" destination="nSo-y6-Pbe" id="Xzt-Ed-cfG"/>
+                        <outlet property="outBtnVoltarVideo" destination="B7v-XD-WZh" id="1gM-pF-cIg"/>
+                        <outlet property="viewPlayer" destination="por-NI-KA2" id="OyX-Gb-Ok1"/>
+                        <outlet property="webview" destination="gqI-dM-VRl" id="QvG-gz-fXX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sw3-dc-b9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1541" y="-899"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HOb-7b-NXG">
+            <objects>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="C1w-Bv-JcA" sceneMemberID="viewController">
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" id="Zbj-Dh-8kI">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="w74-xF-qMq" kind="relationship" relationship="rootViewController" id="FfT-tl-TnY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U3N-lz-bRl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2031" y="-899"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="ClL-VK-pKP">
+            <objects>
+                <viewController storyboardIdentifier="MenuVideo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w74-xF-qMq" customClass="MenuInicialViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lAc-xI-qPo"/>
+                        <viewControllerLayoutGuide type="bottom" id="FPG-V5-6RP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WJH-0a-Wom">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999964" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundoAzul.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IyF-eQ-4Js">
+                                <rect key="frame" x="0.0" y="62" width="1024" height="706"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="barraAmarela.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="ZkU-F9-hCk">
+                                <rect key="frame" x="0.0" y="-1" width="1024" height="80"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlT-rw-5qe">
+                                <rect key="frame" x="967" y="8" width="65" height="62"/>
+                                <state key="normal" backgroundImage="iconePesquisar.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnViewPesquisar:" destination="w74-xF-qMq" eventType="touchUpInside" id="pCI-Vu-Kqa"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mX-nR-O3x">
+                                <rect key="frame" x="16" y="263" width="606" height="490"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXF-bi-toi">
+                                <rect key="frame" x="638" y="230" width="46" height="30"/>
+                                <state key="normal" title="excluir">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="bntExcluir:" destination="w74-xF-qMq" eventType="touchUpInside" id="q4D-s4-zJA"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="29" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8PQ-ZS-YCp">
+                                <rect key="frame" x="21" y="133" width="350" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5z-TM-il3">
+                                <rect key="frame" x="380" y="133" width="80" height="30"/>
+                                <state key="normal" title="Adiconar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAddDesenhoBase:" destination="w74-xF-qMq" eventType="touchUpInside" id="Gu9-MH-niA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="NNu-Le-Kld"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <connections>
+                        <outlet property="scrollDesenho" destination="0mX-nR-O3x" id="rea-8V-da8"/>
+                        <outlet property="txtCampoAddDesenho" destination="8PQ-ZS-YCp" id="neK-2g-avA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMM-tt-zLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-826" y="-899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="barraAmarela.jpeg" width="1017" height="87"/>
+        <image name="fundoAzul.jpg" width="87" height="67"/>
+        <image name="iconeAnteriorVideo.png" width="104" height="100"/>
+        <image name="iconeCadiado.png" width="100" height="143"/>
+        <image name="iconePause.png" width="128" height="128"/>
+        <image name="iconePesquisar.png" width="74" height="100"/>
+        <image name="iconePlay.png" width="128" height="128"/>
+        <image name="iconeProximoVideo.png" width="104" height="100"/>
+        <image name="iconeSeta.png" width="153" height="97"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
